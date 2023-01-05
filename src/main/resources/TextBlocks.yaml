@@ -1,0 +1,27 @@
+- text: simple singe line
+- text: |
+    remove
+      all leading/trailing   
+    blank lines,   
+       keep new line at the end
+- text: >
+    clip to
+    a single
+    line, keep
+    new line at the end
+- text: >
+    do not        
+      clip, because
+       of text indent :(
+- text: >-
+    remove ending     
+    line feed
+- text: |-
+    remove ending
+    line feed
+- text: >+
+    explicitly keep ending
+    line feed
+- text: |+
+    explicitly keep ending
+       line feed
