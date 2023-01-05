@@ -1,4 +1,6 @@
-package adif.util;
+package adif;
+
+import adif.util.YamlUtil;
 
 public class References {
 
