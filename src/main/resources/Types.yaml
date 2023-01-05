@@ -1,0 +1,28 @@
+- &str Hello # string
+- "10" # string
+- &num 10 # integer
+- 10.0 # double
+- 10.0.0 # string
+- true # boolean
+- Yes # boolean true (yes/no)
+- YES # boolean true
+- Yes # boolean true
+- yEs # string (only all lower case, all uppercase or 1st char upper case is a boolean
+- off # boolean false (on/off)
+- False # boolean false (true/false)
+- 80:80 # string
+- 10:10 # Snake YAML: time (minutes since 00:00) /  Jackson: string
+- 2020-04-30 # Snake YAML: java.util.Date / Jackson: string
+- 2020-04-30T12:35:00 # Snake YAML: java.util.Date / Jackson: string
+- 2020-04-30 12:35:00 # Snake YAML: java.util.Date / Jackson: string
+- 2020-04-30T12:35 # string
+- 01:02:03 # string
+- *str # Jackson doesn't resolve the reference
+- *num # Jackson doesn't resolve the reference
+- 0x0E # integer (hex)
+- 011 # integer (octal)
+- 099 # string
+- 1000e-1 # = 100.0 (double)
+- # null
+- null # null
+- ~ # null

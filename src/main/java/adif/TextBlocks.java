@@ -1,8 +1,10 @@
 package adif;
 
-import adif.util.YamlDeserializer;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import adif.util.YamlUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
+import lombok.Builder;
+import lombok.Value;
+import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +13,7 @@ public class TextBlocks {
 
     public static void main(String[] args) {
 
-        List<Text> texts = new YamlDeserializer().readResource("TextBlocks.yaml", new TypeReference<>() {});
+        List<Text> texts = new YamlUtil().readResource("TextBlocks.yaml", new TypeReference<>() {});
 
         String output = texts.stream()
                 .map(Text::getText)
@@ -24,15 +26,11 @@ public class TextBlocks {
         return '>' + textBlock.replaceAll("\n", "<\n>")  +'<';
     }
 
+    @Value
+    @Builder
+    @Jacksonized
     public static class Text {
-        private final String text;
+        String text;
 
-        public Text(@JsonProperty("text") String text) {
-            this.text = text;
-        }
-
-        public String getText() {
-            return text;
-        }
     }
 }

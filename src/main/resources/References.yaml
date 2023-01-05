@@ -1,0 +1,19 @@
+car: &car
+ wheels: 4
+ seats: 5
+ecar:
+  << : *car
+  battery: 200 kWh
+  range: 1000 km
+
+recipe-1: &recipe1
+ - &mk milk
+ - &syp syrup:
+   - water
+   - sugar
+recipe-2: *recipe1
+recipe-3:
+ - *mk
+ - *syp # name (string) only :(
+
+
