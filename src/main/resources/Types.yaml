@@ -7,7 +7,7 @@
 - Yes # boolean true (yes/no)
 - YES # boolean true
 - Yes # boolean true
-- yEs # string (only all lower case, all uppercase or 1st char upper case is a boolean
+- yEs # string (only all lower case, all uppercase or 1st char upper case is a boolean)
 - off # boolean false (on/off)
 - False # boolean false (true/false)
 - 80:80 # string
